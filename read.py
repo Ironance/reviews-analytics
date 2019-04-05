@@ -16,11 +16,18 @@ for review in data:
 
 print('The average lenth of the reviews is', total_len/len(data))
 
+#filter for reviews shorter than 100 words
 new = []
 for d in data:
     if len(d) < 100:
         new.append(d)
-
 print('There are', len(new), 'reviews whose length less than 100.')
-
 print(new[0])
+
+#filter for reviews which contain 'good'
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('There are', len(good), 'reviews which contains "good".')
+print(good[0])
